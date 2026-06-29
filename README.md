@@ -87,6 +87,7 @@ The script will create `data/omnipath_interactions_table.csv` (creating the `dat
 
 ## Notes
 - app.R expects column names `source_genesymbol` and `target_genesymbol` in the CSV.
+- Recommended example: GRB2 gene as source symbol, and SOS1 as target symbol.
 
 ## Contributing
 
