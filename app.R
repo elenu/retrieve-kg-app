@@ -7,7 +7,7 @@ library(igraph)
 library(bslib)
 
 
-df <- readr::read_csv("~/Desktop/Science/Elena_R_scripts/toolkit_2023_2026/omnipath_interactions_table.csv", show_col_types = FALSE)
+df <- readr::read_csv("./Your_directory/data/omnipath_interactions_table.csv", show_col_types = FALSE)
 
 # basic checks and derive columns if needed
 required_basic <- c("source_genesymbol", "target_genesymbol")
