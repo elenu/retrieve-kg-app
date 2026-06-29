@@ -12,8 +12,7 @@ regflux-omnipath-app
 ├── data
 │   └── omnipath_interactions_table.csv
 ├── R
-│   ├── import.R
-│   └── regflux_adapter.R
+│   ├── download_omnipath.R
 ├── tests
 │   └── test_import.R
 ├── DESCRIPTION
