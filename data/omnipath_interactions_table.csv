@@ -1,0 +1,11 @@
+source_genesymbol,target_genesymbol,interaction_type,interaction_strength
+GeneA,GeneB,activation,high
+GeneC,GeneD,inhibition,medium
+GeneE,GeneF,activation,low
+GeneG,GeneH,inhibition,high
+GeneI,GeneJ,activation,medium
+GeneK,GeneL,inhibition,low
+GeneM,GeneN,activation,high
+GeneO,GeneP,inhibition,medium
+GeneQ,GeneR,activation,low
+GeneS,GeneT,inhibition,high

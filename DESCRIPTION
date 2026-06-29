@@ -1,0 +1,23 @@
+Package: retrieve-omnipath-app
+Type: Package
+Title: A Shiny Application for Gene Interaction Analysis
+Version: 0.1.0
+Author: Elena Eyre-Sánchez
+Maintainer: Elena Eyre-Sánchez <elenueyre@yahoo.es>
+Description: This package provides a Shiny application that allows users to analyze gene interactions using data from the Omnipath database. Users can select source and target gene symbols from a provided list and visualize their interactions.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    shiny,
+    dplyr,
+    readr,
+    stringr,
+    visNetwork,
+    igraph,
+    bslib,
+    ggplot2
+Suggests:
+    testthat,
+    OmnipathR,
+    BiocManager
