@@ -72,7 +72,7 @@ Rscript -e 'if (!requireNamespace("testthat", quietly=TRUE)) install.packages("t
 
 ## Data
 
-he application uses the `omnipath_interactions_table.csv` file located in the `data` directory. This file contains gene interaction data that the app processes to provide insights based on user selections.
+he application uses the `omnipath_interactions_table.csv` file located in the `data` directory. This file contains gene interaction data that the app processes to provide insights based on user selections. The current file has been downloaded from Omnipath and cut in order to ease the loading to github.
 
 ### Downloading Omnipath interactions
 
