@@ -9,6 +9,8 @@ The `retrieve-omnipath-app` is a Shiny application designed to analyze gene inte
 ```
 regflux-omnipath-app
 ├── app.R
+├── LICENSE
+├── .gitignore
 ├── data
 │   └── omnipath_interactions_table.csv
 ├── R
