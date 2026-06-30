@@ -1,7 +1,5 @@
 # regflux-omnipath-app
 
-<img src="[relative/path/in/repository/to/image.svg](https://github.com/elenu/retrieve-omnipath-app/blob/main/App_Sample.png?raw=true)" width="150" height="200"/>
-
 ## Overview
 
 The `retrieve-omnipath-app` is a Shiny application designed to analyze gene interactions using data from the Omnipath interactions table. Users can select source and target gene symbols from the provided dataset to explore their interactions (published by Omnipath).
