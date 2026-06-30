@@ -11,6 +11,7 @@ retrieve-kg-app
 ├── app.R
 ├── LICENSE
 ├── .gitignore
+├── manifest.json
 ├── data
 │   └── omnipath_interactions_table.csv
 ├── R
