@@ -6,8 +6,26 @@ library(visNetwork)
 library(igraph)
 library(bslib)
 
-
-df <- readr::read_csv("./Your_directory/data/omnipath_interactions_table.csv", show_col_types = FALSE)
+# Load data: prefer existing CSV in common relative locations; only fetch if missing
+data_candidates <- c(
+  file.path("data", "omnipath_interactions_table.csv"),
+  file.path("..", "data", "omnipath_interactions_table.csv"),
+  path.expand("~/Desktop/Science/Elena_R_scripts/retrieve-omnipath-app-main/data/omnipath_interactions_table.csv")
+)
+found <- data_candidates[file.exists(path.expand(data_candidates))]
+if (length(found) > 0) {
+  df <- readr::read_csv(found[1], show_col_types = FALSE)
+} else if (exists("fetch_omnipath_data", mode = "function")) {
+  df <- tryCatch(fetch_omnipath_data(cache_dir = "omnipathr-cache", out_file = "data/omnipath_interactions_table.csv"),
+                 error = function(e) {
+                   stop("Failed to fetch Omnipath data: ", conditionMessage(e))
+                 })
+  if (is.null(df) || (is.character(df) && !file.exists(df))) {
+    stop("Omnipath data not available and fetch failed or returned nothing. Place data/omnipath_interactions_table.csv in the project.")
+  }
+} else {
+  stop("Could not find data/omnipath_interactions_table.csv. Create the file or provide fetch_omnipath_data(). Checked: ", paste(data_candidates, collapse = ", "))
+}
 
 # basic checks and derive columns if needed
 required_basic <- c("source_genesymbol", "target_genesymbol")
@@ -110,7 +128,7 @@ ui <- fluidPage(
     .selectize-control .option { color: var(--pastel-text) !important; }
 
   "))),
-  titlePanel(title = div(tags$strong("Retreive Omnipath network"))),
+  titlePanel(title = div(tags$strong("Retreive Your Knowledge Graph"))),
   sidebarLayout(
     sidebarPanel(
       helpText("Select source/target genes. Leave both empty to show top interactions."),
@@ -130,6 +148,8 @@ ui <- fluidPage(
       visNetworkOutput("network", height = "720px"),
       hr(),
       tableOutput("interactions"),
+      tags$div(style = "margin-top:12px; color:#6c757d; font-size:0.9em; text-align:right;",
+           "Author: Elena Eyre-Sanchez, PhD — Last updated: 2026"),
       width = 9
     )
   )
