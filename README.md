@@ -1,6 +1,6 @@
 # regflux-omnipath-app
 
-[App_Sample.png](https://github.com/elenu/retrieve-omnipath-app/blob/main/App_Sample.png)
+![Browser](https://github.com/elenu/retrieve-omnipath-app/blob/main/App_Sample.png)
 
 ## Overview
 
