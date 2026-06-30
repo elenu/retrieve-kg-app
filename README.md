@@ -1,6 +1,6 @@
 # regflux-omnipath-app
 
-<img src="[relative/path/in/repository/to/image.svg](https://github.com/elenu/retrieve-omnipath-app/blob/main/App_Sample.png?raw=true)" width="128"/>
+<img src="[relative/path/in/repository/to/image.svg](https://github.com/elenu/retrieve-omnipath-app/blob/main/App_Sample.png?raw=true)" width="250"/>
 
 ## Overview
 
